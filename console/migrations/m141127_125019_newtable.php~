@@ -9,9 +9,6 @@ class m141127_125019_newtable extends Migration
     public function up()
     {
 
-
-
-
         $this->createTable('{{%kyrorts}}', [
             'id' => Schema::TYPE_PK,
             'nazva' => Schema::TYPE_STRING . ' NOT NULL',
