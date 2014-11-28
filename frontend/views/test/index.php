@@ -1,9 +1,7 @@
 <?php
-/* @var $this yii\web\View */
-?>
-<h1>test/index</h1>
-
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+$form = \yii\widgets\ActiveForm::begin(); ?>
+<?=$form-> field($model, 'name');?>
+<?=$form->field($model,'email');?>
+<?=$form->field($model,'password');?>
+<?= html::submitButton(Yii::t('app','ok'));?>
+<?php \yii\widgets\ActiveForm::end();?>

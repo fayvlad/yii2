@@ -1,0 +1,13 @@
+home work 1
+-------------------------
+	+	|Поставить Адвансед YII2 
+	+	|создать свой контролер свой экшен 
+	-	|создать свой модуль со своим контролером и экшеном.
+
+
+home work 2
+-------------------------
+	+	|создать migration
+	+	|создать модель
+	+	|Create all relation ( one to one, one to many, many to many)
+	+	|Create form with ActiveForm
