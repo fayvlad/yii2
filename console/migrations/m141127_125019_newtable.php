@@ -21,10 +21,18 @@ class m141127_125019_newtable extends Migration
 
         ]);
 
+        $this->createTable('{{%users}}', [
+            'user_id' => Schema::TYPE_PK,
+            'username' => Schema::TYPE_STRING . ' (100)NOT NULL',
+            'password' => Schema::TYPE_STRING . '(50) NOT NULL',
+
+        ]);
+
     }
 
     public function down()
     {
+        $this->dropTable('{{%users}}');
         $this->dropTable('{{%kyrorts}}');
     }
 }

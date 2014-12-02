@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\UserForm;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -167,5 +168,19 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+
+    public function actionHello(){
+        $name = 'gitHub';
+        return $this->render('hello',array('name'=>$name));
+    }
+
+    public function actionUser(){
+        $model = new UserForm;
+        if($model->load(Yii::$app->request->post()&& $model->validate())){
+        Yii::$app->session->setFlash('success','you have entered the data correctly');
+        }
+                    return $this->render('userForm',['model'=>$model]);
+
     }
 }
