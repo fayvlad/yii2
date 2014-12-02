@@ -27,11 +27,19 @@ class m141127_125019_newtable extends Migration
             'password' => Schema::TYPE_STRING . '(50) NOT NULL',
 
         ]);
+        $this->createTable('{{%posts}}', [
+            'post_id' => Schema::TYPE_PK,
+            'post_title' => Schema::TYPE_STRING . ' (100)NOT NULL',
+            'post_description' => Schema::TYPE_TEXT . 'NOT NULL',
+            'autor_id' => Schema::TYPE_INTEGER . 'NOT NULL',
+
+        ]);
 
     }
 
     public function down()
     {
+        $this->dropTable('{{%posts}}');
         $this->dropTable('{{%users}}');
         $this->dropTable('{{%kyrorts}}');
     }
